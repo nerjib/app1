@@ -4,7 +4,7 @@ dotenv.config();
 
 // your credentials
 //DATABASE_URL = 'postgres://postgres:1886@127.0.0.1:5432/postgres';
-DATABASE_URL = 'postgres://postgres:1886@127.0.0.1:5432/postgres33'
+//DATABASE_URL = 'postgres://postgres:1886@127.0.0.1:5432/postgres33'
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL
@@ -19,7 +19,7 @@ function query(text) {
         resolve(res);
       })
       .catch((err) => {
-        reject(err);
+        reject(err+ 'hhhh');
       });
   });
 }

@@ -17,7 +17,7 @@ export const messagesPage = async (req, res) => {
 
 const router = express.Router();
 
-router.get('/hh', async (req, res, next) => {
+router.get('/hh', async (req, res) => {
    // res.status(200).json({ messages: 'data.rows '});
     try {
         const readAllQuery = 'SELECT * FROM users';
