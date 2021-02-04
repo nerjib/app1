@@ -18,7 +18,7 @@ router.post('/', (req, res, next) => {
         res.status(200).json({"ff":"hello"});
   });
   
-  router.get('/user', (req, res, next) => {
+  router.get('/user', async (req, res) => {
 
   const getAllQ = 'SELECT * from users';
   try {
