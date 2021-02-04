@@ -7,7 +7,10 @@ dotenv.config();
 //DATABASE_URL = 'postgres://postgres:1886@127.0.0.1:5432/postgres33'
 
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
 });
 
 // a generic query, that executes all queries you send to it
