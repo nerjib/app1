@@ -42,7 +42,7 @@ client.query('SELECT * from users;', (err, res) => {
 router.get('/hh', async (req, res) => {
    // res.status(200).json({ messages: 'data.rows '});
     try {
-        const readAllQuery = 'SELECT * FROM users';
+        const readAllQuery = 'SELECT * FROM users where id=1';
         const { rows } = await database.query(readAllQuery);
         return res.send({ rows });
       } catch (error) {
