@@ -12,6 +12,7 @@ export const messagesPage = async (req, res) => {
   }
 };
 */
+const router = express.Router();
 
 
 const { Client } = require('pg');
@@ -37,7 +38,6 @@ client.query('SELECT * from users;', (err, res) => {
 });
 })
 
-const router = express.Router();
 
 router.get('/hh', async (req, res) => {
    // res.status(200).json({ messages: 'data.rows '});
